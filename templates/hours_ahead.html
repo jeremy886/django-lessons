@@ -1,0 +1,11 @@
+{%  extends "base.html" %}
+
+{% block title %} Future Time {%  endblock %}
+
+{% block content %}
+    {% if hours_offset == 1 %}
+    <p>In {{ hours_offset }} hour, it will be {{ next_time }}.</p>
+    {% else %}
+    <p>In {{ hours_offset }} hours, it will be {{ next_time }}.</p>
+    {% endif %}
+{% endblock %}
