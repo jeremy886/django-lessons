@@ -14,7 +14,14 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from books.views import hello, current_url_view, display_ua, display_meta, search, search2
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^search/$', search),
+    url(r'^search2/$', search2),
+    url(r'^hello/$', hello),
+    url(r'^browser/$', display_ua),
+    url(r'^meta/$', display_meta),
+    #url(r'^.*/$', current_url_view),
 ]
