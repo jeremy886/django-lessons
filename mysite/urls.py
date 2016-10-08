@@ -14,7 +14,16 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from . import views, views2, views3, views4
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^view1/$', views.view_1),
+    url(r'^view2/$', views.view_2),
+    url(r'^view_1/$', views2.view_1),
+    url(r'^view_2/$', views2.view_2),
+    url(r'^view-1/$', views3.view_1),
+    url(r'^view-2/$', views3.view_2),
+    url(r'^hi/$', views4.hi),
+    url(r'^hello/$', views4.hello)
 ]

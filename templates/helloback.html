@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Response to Hello</title>
+</head>
+<body>
+You say (not escaped) {{ message|safe }}
+<br/>
+You say (escaped): {{ message }}
+<hr/>
+{% autoescape off %}
+Response not escaped: {{ message }} <br/>
+{% endautoescape %}
+{% autoescape on %}
+Response not escaped: {{ message }}
+{% endautoescape %}
+<hr/>
+Filter Arguments are treated as safe:<br/>
+{{ data|default:'I love your <b>site!</b>' }}
+<!--
+Try these:
+Your site <b>sucks
+Sunday is <h1> great </h1>
+Hello, <script>alert('hello')</script>
+-->
+</body>
+</html>

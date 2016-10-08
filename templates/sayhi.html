@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Say Hi</title>
+</head>
+<body>
+    {% if error %}
+        <p style="color: red;">Please say hi.</p>
+    {% endif %}
+    <form action="" method="get">
+        <label for="prompt">Your message: </label>
+        <input type="text" name="q">
+        <input type="submit" value="Say hi">
+    </form>
+</body>
+</html>
