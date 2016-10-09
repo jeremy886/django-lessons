@@ -15,6 +15,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from . import views, views2, views3, views4
+from reviews import views as v
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -25,5 +26,6 @@ urlpatterns = [
     url(r'^view-1/$', views3.view_1),
     url(r'^view-2/$', views3.view_2),
     url(r'^hi/$', views4.hi),
-    url(r'^hello/$', views4.hello)
+    url(r'^hello/$', views4.hello),
+    url(r'^review1/$', v.write_review)
 ]

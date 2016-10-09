@@ -1,0 +1,17 @@
+{% load review_extras %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Review</title>
+</head>
+<body>
+<h1>Your review</h1>
+<hr/>
+{{ message|cut:"!" }}
+<hr/>
+{{ message|vowel_upper }}
+<hr/>
+{{ message|lower }}
+</body>
+</html>
