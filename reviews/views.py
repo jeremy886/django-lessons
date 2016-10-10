@@ -14,3 +14,9 @@ def write_review(request):
         form = MessageForm(initial={'your_message': 'Your site is fantastic!'})
 
     return render(request, 'write_review.html', {'form': form})
+
+def time_calc(request):
+    return render(request, 'show_time.html')
+
+def tz_time_calc(request):
+    return render(request, 'show_time.html', {'timezone': 'Asia/Taipei'})

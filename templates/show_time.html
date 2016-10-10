@@ -1,0 +1,19 @@
+{% load custom_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>What time is it?</title>
+</head>
+<body>
+<h2>Local time</h2>
+{% current_time "%c" %}
+{% if timezone %}
+<h2>{{ timezone }} Time</h2>
+{% current_timezone_time "%c" %}
+{% endif %}
+<footer>
+    {% copyright "Jeremy Chen" %}
+</footer>
+</body>
+</html>

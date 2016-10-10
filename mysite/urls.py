@@ -27,5 +27,7 @@ urlpatterns = [
     url(r'^view-2/$', views3.view_2),
     url(r'^hi/$', views4.hi),
     url(r'^hello/$', views4.hello),
-    url(r'^review1/$', v.write_review)
+    url(r'^review1/$', v.write_review),
+    url(r'^time/$', v.time_calc),
+    url(r'^tztime/$', v.tz_time_calc),
 ]
