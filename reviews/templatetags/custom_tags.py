@@ -19,9 +19,6 @@ def current_timezone_time(context, format_string):
 
 register.simple_tag(lambda author: "Copyright (c) 2016 by " + author, name='copyright')
 
-@register.inclusion_tag('show_time2.html', takes_context=True):
-def tztime(context):
-    return {
-        'time_loal': context['time_local'],
-        'time_taipei': context['time_taipei']
-    }
+
+
+
