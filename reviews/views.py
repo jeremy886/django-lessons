@@ -20,3 +20,8 @@ def time_calc(request):
 
 def tz_time_calc(request):
     return render(request, 'show_time.html', {'timezone': 'Asia/Taipei'})
+
+def time_inc(request):
+    time_str_local = '12:17 PM, Sunday, 2016 10 16'
+    time_str_taipei = '09:17 AM, Sunday, 2016 10 16'
+    return render(request, 'show_time2.html', {'time_local': time_str_local, 'time_taipei': time_str_taipei })

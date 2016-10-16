@@ -30,4 +30,5 @@ urlpatterns = [
     url(r'^review1/$', v.write_review),
     url(r'^time/$', v.time_calc),
     url(r'^tztime/$', v.tz_time_calc),
+    url(r'^timeinc/$', v.time_inc),
 ]
